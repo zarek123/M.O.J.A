@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>M.O.J.A</title>
+</head>
+<body>
+
+
+    <h2> Wyswietl</h2>
+    <table>
+       
+    {% for osoba in myresult %}
+        <tr>
+            <td>{{osoba[0]}}</td>
+            <td> {{osoba[1]}}</td>
+            <td> {{osoba[2]}} </td>
+        </tr>
+    {% endfor %}
+    </table>
+    <a href="/">Menu</a>
+
+</body>
+</html>

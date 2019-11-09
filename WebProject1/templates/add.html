@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>M.O.J.A</title>
+</head>
+<body>
+
+
+    <h2> Dodaj</h2>
+
+    <form method="POST" action="{{ url_for('add') }}">
+        <input name="name" value="" />
+        <input name="surname" value="" />
+        <button type="submit">Dodaj pracownika</button>
+    </form>
+
+    <p>
+        {% if error %}
+        <strong class="error">Błąd: {{ error }}</strong>
+        {% endif %}
+
+        {% for message in get_flashed_messages() %}
+        <strong class="success">{{ message }}</strong>
+        {% endfor %}
+    </p>
+
+    <a href="/">Menu</a>
+
+</body>
+</html>
